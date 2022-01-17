@@ -1,20 +1,7 @@
 package com.lockedme.companylockers;
 
-
-
 public class Main {
 	
-	public int mainMenu() {
-		
-		return 0;
-	}
-	
-	public int subMenu() {
-		
-		return 0;
-		
-	}
-
 	public static void main(String[] args) {
 		
 		int menuItem = 0;
