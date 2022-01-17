@@ -15,20 +15,16 @@ public class Main {
 		
 	}
 
-	public static void printBanner() {
-		System.out.println("____    __    ____  _______  __        ______   ______   .___  ___.  _______"); 
-		System.out.println("\\   \\  /  \\  /   / |   ____||  |      /      | /  __  \\  |   \\/   | |   ____|");
-		System.out.println(" \\   \\/    \\/   /  |  |__   |  |     |  ,----'|  |  |  | |  \\  /  | |  |__");   
-		System.out.println("  \\            /   |   __|  |  |     |  |     |  |  |  | |  |\\/|  | |   __|  ");
-		System.out.println("   \\    /\\    /    |  |____ |  `----.|  `----.|  `--'  | |  |  |  | |  |____"); 
-		System.out.println("    \\__/  \\__/     |_______||_______| \\______| \\______/  |__|  |__| |_______|");
-		                                                                             
-		System.out.println("Application Name: LockedMe.com");
-		System.out.println("Written by: Tim Wyatt (tim.wyatt@vodafone.com");
-	}
 	public static void main(String[] args) {
 		
+		int menuItem = 0;
+		String[] menuItems = {"first","second","third"};
 		banner b = new banner("app", "Tim Wyatt","wyattim@gmail.com");
 		b.printBanner();
+		//Need a loop to go around the menu, until a quit is detected
+		menu m = new menu(menuItems);
+		m.printMenu();
+		
+		
 	}
 }
