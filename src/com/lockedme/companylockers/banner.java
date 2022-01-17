@@ -2,9 +2,9 @@ package com.lockedme.companylockers;
 
 public class banner {
 	
-	static String appCreator = new String("");
-	static String appName = new String("");
-	static String creatorEmail = new String("");
+	private String appCreator = new String("");
+	private String appName = new String("");
+	private String creatorEmail = new String("");
 	
 	/**
 	 * 
@@ -12,7 +12,7 @@ public class banner {
 	 * @param email
 	 * @param creator
 	 */
-	public banner (String app,  String email, String creator){
+	public banner (String app,  String creator, String email){
 		appCreator = creator;
 		creatorEmail = email;
 		appName = app;

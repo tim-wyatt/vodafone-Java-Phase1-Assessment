@@ -28,7 +28,7 @@ public class Main {
 	}
 	public static void main(String[] args) {
 		
-		banner b = new banner("app", "wyattim@gmail.com", "Tim Wyatt");
+		banner b = new banner("app", "Tim Wyatt","wyattim@gmail.com");
 		b.printBanner();
 	}
 }
