@@ -4,16 +4,12 @@ import java.util.Scanner;
 
 public class menu {
 
-	private String[] menuItems;
-	private String root = new String();
+	protected String[] menuItems;
+	protected String inputText;
 
 	public menu(String[] items) {
 		this.menuItems = items;
-	}
-
-	public menu(String rootItem, String[] items) {
-		this.root = rootItem;
-		this.menuItems = items;
+		this.inputText = "Enter a menu item number <q to quit>: ";
 	}
 
 	public String[] getMenuArray() {
@@ -49,7 +45,7 @@ public class menu {
 		Scanner sc = new Scanner(System.in);
 
 		try {
-			System.out.print("Enter a menu item number <q to quit>: ");
+			System.out.print(inputText);
 			selection = sc.next();
 		} catch (Exception e) {
 			System.out.println("An error occurred!");			
