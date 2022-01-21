@@ -53,7 +53,7 @@ public class menu {
 			selection = sc.next();
 		} catch (Exception e) {
 			System.out.println("An error occurred!");			
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return selection;
 	}
