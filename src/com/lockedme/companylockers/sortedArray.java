@@ -12,7 +12,11 @@ public class sortedArray {
 		itemsInArray = 0;
 		
 	}
-	//Temporary constructor to test
+
+	/*
+	 * Temporary constructor to test
+	 * TODO Remove Me!
+	 */
 	public sortedArray(String[] inArray) {
 		array = inArray;
 		itemsInArray = array.length;
@@ -36,6 +40,9 @@ public class sortedArray {
 		if (itemsInArray < arrayLen) {
 			array[itemsInArray] = filename;
 			itemsInArray++;
+			/*
+			 * Possibly only do this when we print the array rather than everytime we add to it?
+			 */
 			mergeSort(array);
 		}
 		else {
@@ -44,6 +51,40 @@ public class sortedArray {
 			itemsInArray++;	
 			mergeSort(array);
 		}
+	}
+	
+	public void deleteFileName(String filename) {
+		int index;
+		
+		
+	}
+	
+	public int searchForFile(String filename) {
+		int index = 0;
+		int ia = itemsInArray;
+		int returnInt = 0;
+		
+		if(itemsInArray>0 && array[index].equals(filename)) {
+			returnInt = index;
+		}
+		else {
+			int left = 0;
+			int right = array.length-1;
+			while(left <= right) {
+				int mid = (left+right)/2;
+				if(array[mid].compareTo(filename) == 0)
+					returnInt = mid;
+				if(array[mid].compareTo(filename)<0)
+					left = mid+1;
+				else if (array[mid].compareTo(filename) > 0)
+					right = mid-1;
+				else
+					right=mid-1;
+			}	
+				returnInt = -1;
+		}
+		
+		return returnInt;
 	}
 	
 	private void growArray() {
@@ -56,15 +97,12 @@ public class sortedArray {
 	
 	public void printArray() {
 		if(itemsInArray > 0) {
-		for(int x=0; x<=array.length-1;x++ )
-			System.out.println(array[x]);
+			tablePrinter tp = new tablePrinter(array);
 		}
 		else {
-			System.out.println("+---------------------------+");
-			System.out.println("|                           |");
-			System.out.println("| There are no files stored | ");
-			System.out.println("|                           |");
-			System.out.println("+---------------------------+");
+			String[] noFiles = new String[] {"There are no files stored"};
+			tablePrinter tp = new tablePrinter(noFiles);
+			
 		}
 	}
 	
