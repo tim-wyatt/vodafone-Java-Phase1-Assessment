@@ -34,13 +34,13 @@ public class sortedArray {
 	
 	public void addNewFileName(String filename) {
 		if (itemsInArray < arrayLen) {
-			array[itemsInArray+1] = filename;
+			array[itemsInArray] = filename;
 			itemsInArray++;
 			mergeSort(array);
 		}
 		else {
 			growArray();
-			array[itemsInArray+1] = filename;
+			array[itemsInArray] = filename;
 			itemsInArray++;	
 			mergeSort(array);
 		}
@@ -48,23 +48,24 @@ public class sortedArray {
 	
 	private void growArray() {
 		String[] tempArray = new String[itemsInArray+1];
-		for(int x=0; x<array.length-1; x++) {
+		for(int x=0; x<itemsInArray; x++) {
 			tempArray[x] = array[x];
 		}
 		array = tempArray;
 	}
 	
 	public void printArray() {
-		if(itemsInArray < 0) {
+		if(itemsInArray > 0) {
 		for(int x=0; x<=array.length-1;x++ )
 			System.out.println(array[x]);
 		}
-		else
+		else {
 			System.out.println("+---------------------------+");
 			System.out.println("|                           |");
 			System.out.println("| There are no files stored | ");
 			System.out.println("|                           |");
 			System.out.println("+---------------------------+");
+		}
 	}
 	
 	private static void mergeSort(String arr[])
