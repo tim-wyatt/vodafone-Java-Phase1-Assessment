@@ -56,7 +56,6 @@ public class sortedArray {
 	public void deleteFileName(String filename) {
 		int index;
 		String[] tempArray = new String[array.length -1];
-		
 		index = searchForFile(filename);
 		
 		if(index < 0) {
@@ -70,6 +69,7 @@ public class sortedArray {
 			}
 		}
 		array = tempArray;
+		itemsInArray--;
 	}
 	
 	public int searchForFile(String filename) {
