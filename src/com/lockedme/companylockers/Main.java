@@ -36,11 +36,14 @@ public class Main {
 	}
 	
 	private static void sMenu(String rootMenuString, sortedArray fileArray) {
+		
+		int searchResult = 0;
 		String[] fileOpsMenuItems = {"Add new file","Search for a file","Delete a file"};
 		String sMenuOption;
+		String searchFile = new String();
+		
 		subMenu sm = new subMenu(fileOpsMenuItems, rootMenuString);
 		clearScreen();
-		b.printBanner();
 		sm.printMenu();
 		sMenuOption = sm.getUserInput();
 		
@@ -51,11 +54,14 @@ public class Main {
 			fileArray.printArray();
 			break;
 		case "b":
-			String searchFile = getFileName("Enter the file you wish to search for: ");
-			int searchResult = fileArray.searchForFile(searchFile);
+			searchFile = getFileName("Enter the file you wish to search for: ");
+			searchResult = fileArray.searchForFile(searchFile);
 			System.out.println("Result of search: " + searchResult);
 			break;
 		case "c":
+			searchFile = getFileName("Enter the file you wish to delete: ");
+			fileArray.deleteFileName(searchFile);
+			fileArray.printArray();
 			break;
 		}
 	}
@@ -83,5 +89,4 @@ public class Main {
 			e.printStackTrace();
 		} 
 	}  
-
 }

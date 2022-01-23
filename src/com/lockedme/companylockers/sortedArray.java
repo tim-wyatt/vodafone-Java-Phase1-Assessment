@@ -57,7 +57,6 @@ public class sortedArray {
 		int index;
 		String[] tempArray = new String[array.length -1];
 		
-		
 		index = searchForFile(filename);
 		
 		if(index < 0) {
@@ -74,25 +73,20 @@ public class sortedArray {
 	}
 	
 	public int searchForFile(String filename) {
-
-//		int returnInt = 0;
-		
-			int left = 0;
-			int right = array.length-1;
-			while(left <= right) {
-				int mid = (left+right)/2;
-				if(array[mid].compareTo(filename) == 0)
-					return mid;
-				if(array[mid].compareTo(filename)<0)
-					left = mid+1;
-				else if (array[mid].compareTo(filename) >0)
-					right = mid-1;
-				else
-					right=mid-1;
-			}	
-//		returnInt = -1;
-//		return returnInt;
-			return -1;
+		int left = 0;
+		int right = array.length-1;
+		while(left <= right) {
+			int mid = (left+right)/2;
+			if(array[mid].compareTo(filename) == 0)
+				return mid;
+			if(array[mid].compareTo(filename)<0)
+				left = mid+1;
+			else if (array[mid].compareTo(filename) >0)
+				right = mid-1;
+			else
+				right=mid-1;
+		}	
+		return -1;
 	}
 	
 	private void growArray() {
