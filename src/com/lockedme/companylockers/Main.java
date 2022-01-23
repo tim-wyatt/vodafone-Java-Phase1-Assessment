@@ -10,8 +10,6 @@ public class Main {
 		String menuItem = new String();
 		String[] mainMenuItems = {"Display current files","File operations"};
  
-	//	String[] testarray = new String[] {"a.jpg","z.jpg","d.jpg","h.jpg","y.jpg","try.jpg","zzTop.jpg"};
-	//	sortedArray filearray = new sortedArray(testarray);
 		sortedArray filearray = new sortedArray();
 		String menuString = new String();
 		
@@ -39,30 +37,38 @@ public class Main {
 		
 		int searchResult = 0;
 		String[] fileOpsMenuItems = {"Add new file","Search for a file","Delete a file"};
-		String sMenuOption;
+		String sMenuOption = new String();
 		String searchFile = new String();
-		
 		subMenu sm = new subMenu(fileOpsMenuItems, rootMenuString);
-		clearScreen();
-		sm.printMenu();
-		sMenuOption = sm.getUserInput();
-		
-		switch(sMenuOption) {
-		case "a":
-			file File = new file();
-			fileArray.addNewFileName(File.getFileName());
-			fileArray.printArray();
-			break;
-		case "b":
-			searchFile = getFileName("Enter the file you wish to search for: ");
-			searchResult = fileArray.searchForFile(searchFile);
-			System.out.println("Result of search: " + searchResult);
-			break;
-		case "c":
-			searchFile = getFileName("Enter the file you wish to delete: ");
-			fileArray.deleteFileName(searchFile);
-			fileArray.printArray();
-			break;
+
+		while(sMenuOption.compareTo("q") != 0) {
+		//	clearScreen();
+			sm.printMenu();
+			sMenuOption = sm.getUserInput();
+
+			switch(sMenuOption) {
+			case "a":
+				file File = new file();
+				fileArray.addNewFileName(File.getFileName());
+				fileArray.printArray();
+				break;
+			case "b":
+				searchFile = getFileName("Enter the file you wish to search for: ");
+				searchResult = fileArray.searchForFile(searchFile);
+				System.out.println("Result of search: " + searchResult);
+				break;
+			case "c":
+				searchFile = getFileName("Enter the file you wish to delete: ");
+				fileArray.deleteFileName(searchFile);
+				fileArray.printArray();
+				break;
+			case "q":
+				System.out.print("Returning to main menu....");
+				break;
+			default:
+				System.out.println("That option doesn't exist");
+				break;
+			}
 		}
 	}
 	
