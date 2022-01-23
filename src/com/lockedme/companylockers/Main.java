@@ -55,7 +55,11 @@ public class Main {
 			case "b":
 				searchFile = getFileName("Enter the file you wish to search for: ");
 				searchResult = fileArray.searchForFile(searchFile);
-				System.out.println("Result of search: " + searchResult);
+				if(searchResult >=0) 
+					System.out.println("The file exists at index "+ searchResult);
+				else
+					System.out.println("The file does not exist");
+				
 				break;
 			case "c":
 				searchFile = getFileName("Enter the file you wish to delete: ");
