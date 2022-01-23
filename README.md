@@ -59,17 +59,32 @@ The File Operations menu will have the following features:
 - On success a list of current files in the system will be displayed
 - On failure (i.e. file could not be found) the user will be informed the specified file cannot be found.
 
-##Data Structure
+## Data Structure
 The main data structure used is an array. The implementation of the array is via a class - sortedArray. This is so that methods for sorting, deleting, and searching can be added.  
 
 A linked list was contemplated as this would have given benefits in time/space complexity for inesertion and deletion. However, due to the expected number of sorting events it was felt that in the short term an array would be more efficient.
 
-##Algorithms used
-######Sorting Algorithm
+## Algorithms used
+###### Sorting Algorithm
 The sorting algorithm used is Merge Sort. This is so that if, in future the data structure is changed to a linked list, the sorting algorithm will still be efficient.  
 
-######Searching Algorithm
+###### Searching Algorithm
 The searching algorithm used is binary search.
 
+## Sprint Planning
+The implementation of this demo program is relatively simple. Sprints will be as follows:
 
+###### Sprint 1
+ - Plan data structures and algorithms
+ - Implement Welcome Banner
+ - Implement primary menu
+ - Implement list files
+ - Implement output "printer"
+###### Sprint 2
+ - Implement sub-menu
+ - Implement add files
+ - Implement search files
+ - Implement delete files
+ 
+As this is using an Agile paradigm, acceptance tests are run at the time of code implementation. 
 
