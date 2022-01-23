@@ -87,3 +87,9 @@ The implementation of this demo program is relatively simple. Sprints will be as
  - Implement delete files
  
 As this is using an Agile paradigm, acceptance tests are run at the time of code implementation. 
+
+## Java concepts used in program
+The following concepts have been used:
+- Object oriented programming
+- Inheritance - submenu inherits from main menu
+- Polymorphism - submenu printMenu() method overrides the parent class
