@@ -9,8 +9,10 @@ This program has been created to provide a concept command line interface for li
 - Option to quit the program
 
 The File Operations menu will have the following features:	
-
-	- An option to quit this menu and return to the main menu
+- Add a new file to the system
+- Search for a file in the system
+- Delete a file in the system
+- An option to quit this menu and return to the main menu
 
  
 
