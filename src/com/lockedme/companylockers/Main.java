@@ -1,6 +1,7 @@
 package com.lockedme.companylockers;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 	static banner b = new banner("app", "Tim Wyatt","wyattim@gmail.com");
@@ -35,7 +36,7 @@ public class Main {
 	}
 	
 	private static void sMenu(String rootMenuString, sortedArray fileArray) {
-		String[] fileOpsMenuItems = {"Add new file","Delete a file","Search for a file","Back to main menu"};
+		String[] fileOpsMenuItems = {"Add new file","Search for a file","Delete a file"};
 		String sMenuOption;
 		subMenu sm = new subMenu(fileOpsMenuItems, rootMenuString);
 		clearScreen();
@@ -50,12 +51,29 @@ public class Main {
 			fileArray.printArray();
 			break;
 		case "b":
+			String searchFile = getFileName("Enter the file you wish to search for: ");
+			int searchResult = fileArray.searchForFile(searchFile);
+			System.out.println("Result of search: " + searchResult);
 			break;
-		case "q":
+		case "c":
 			break;
 		}
+	}
+	
+	public static String getFileName(String question) {
+		String userInput = new String();
+		String inputText = question;
+		Scanner sc = new Scanner(System.in);
+
+		try {
+			System.out.print(inputText);
+			userInput = sc.next();
+		} catch (Exception e) {
+			System.out.println("An error occurred!");			
+			//e.printStackTrace();
+		}
 		
-		
+		return userInput;
 	}
 	public static void clearScreen() {  
 		try {
