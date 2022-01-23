@@ -11,10 +11,10 @@ public class tablePrinter {
 	private static void printTable(String[] arrayToPrint) {
 		//TODO Tidy this up so that the table has a minimum length and fits longest string
 		
-		String leftAlignFormat = "| %-19s                                   |%n";
+		String leftAlignFormat = "| %-47s|%n";
 
 		System.out.format("+------------------------------------------------+%n");
-		System.out.format("| Filename                                       |%n");
+		System.out.format("|                  Files Stored                  |%n");
 		System.out.format("+------------------------------------------------+%n");
 		for (int i = 0; i <= arrayToPrint.length-1; i++) {
 		    System.out.format(leftAlignFormat, arrayToPrint[i]);

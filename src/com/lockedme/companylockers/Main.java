@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-	static banner b = new banner("app", "Tim Wyatt","wyattim@gmail.com");
+	static banner b = new banner("File Locker Application", "Tim Wyatt","tim.wyatt@vodafone.com");
 	
 	public static void main(String[] args) {
 		String menuItem = new String();
