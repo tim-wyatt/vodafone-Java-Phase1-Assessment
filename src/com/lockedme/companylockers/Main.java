@@ -63,7 +63,7 @@ public class Main {
 				fileArray.printArray();
 				break;
 			case "q":
-				System.out.print("Returning to main menu....");
+				System.out.println("Returning to main menu....");
 				break;
 			default:
 				System.out.println("That option doesn't exist");
