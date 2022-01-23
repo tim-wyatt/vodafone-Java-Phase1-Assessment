@@ -20,9 +20,11 @@ The File Operations menu will have the following features:
 Present a formatted table containing a list of files in the system
 The list of files must be formatted alphabetically
 If there are no files in the system then a suitable message must be displayed:
-```+------------------------------------------------+
+```
++------------------------------------------------+
 |                  Files Stored                  |
 +------------------------------------------------+
 | There are no files stored                      |
-+------------------------------------------------+```
++------------------------------------------------+
+```
 
